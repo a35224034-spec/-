@@ -1,0 +1,137 @@
+/* style.css */
+
+/* --- Переменные --- */
+:root {
+  --accent: #4f46e5;
+  --accent2: #06b6d4;
+  --bg: #0f1724;
+  --muted: #9aa4b2;
+  --card: #101b2e;
+  --radius: 10px;
+  --transition: 0.3s ease;
+}
+
+/* --- Общие стили --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* --- Хедер --- */
+header {
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 10%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(6px);
+}
+
+header h1 {
+  font-size: 24px;
+}
+
+/* --- Навигация --- */
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 8px 14px;
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+nav a:hover,
+nav a.active {
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+}
+
+/* --- Основной контент --- */
+main {
+  padding: 40px 10%;
+  min-height: 70vh;
+  animation: fadeIn 0.5s ease;
+}
+
+main h2 {
+  margin-bottom: 16px;
+  font-size: 28px;
+  border-bottom: 3px solid var(--accent);
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+main p, main li {
+  margin-bottom: 12px;
+}
+
+/* --- Списки --- */
+ul {
+  list-style: disc inside;
+}
+
+/* --- Изображения --- */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  transition: transform var(--transition);
+  margin: 10px 0;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+/* --- Футер --- */
+footer {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px 10%;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* --- Анимации --- */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* --- Адаптив --- */
+@media (max-width: 1024px) {
+  main { padding: 30px 5%; }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  nav a {
+    margin: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  main h2 { font-size: 24px; }
+  header h1 { font-size: 20px; }
+}
