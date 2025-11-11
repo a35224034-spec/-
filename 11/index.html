@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>АСЫЛ — Современный адаптивный сайт</title>
+  <style>
+    :root {
+      --accent: #4f46e5;
+      --accent2: #06b6d4;
+      --bg: #0f1724;
+      --muted: #9aa4b2;
+      --card: #101b2e;
+      --radius: 14px;
+      --transition: 0.3s ease;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: #fff;
+      line-height: 1.6;
+    }
+    header {
+      background: rgba(255,255,255,0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 10%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(6px);
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: var(--transition);
+    }
+    nav a:hover, nav a.active {
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+    }
+    main {
+      padding: 40px 10%;
+      min-height: 70vh;
+      animation: fadeIn 0.5s ease;
+    }
+    footer {
+      background: rgba(255,255,255,0.05);
+      text-align: center;
+      padding: 20px 10%;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(10px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @media(max-width:768px){
+      header{flex-direction:column;}
+      nav{display:flex;flex-wrap:wrap;justify-content:center;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>АСЫЛ — Веб-портфолио</h1>
+    <nav>
+      <a href="#home" class="active">Главная</a>
+      <a href="#about">О нас</a>
+      <a href="#services">Услуги</a>
+      <a href="#portfolio">Портфолио</a>
+      <a href="#team">Команда</a>
+      <a href="#news">Новости</a>
+      <a href="#gallery">Галерея</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contacts">Контакты</a>
+      <a href="#faq">FAQ</a>
+      <a href="#blog">Блог</a>
+    </nav>
+  </header>
+
+  <main id="content">
+    <section id="home">
+      <h2>Главная</h2>
+      <p>Добро пожаловать на адаптивный многостраничный сайт АСЫЛ. Этот шаблон создан на чистом HTML и CSS с простыми анимациями и современным дизайном.</p>
+    </section>
+    <section id="about">
+      <h2>О нас</h2>
+      <p>Мы команда профессионалов, занимающихся веб-разработкой, дизайном и созданием адаптивных сайтов. Наш приоритет — качество, креатив и удобство.</p>
+    </section>
+    <section id="services">
+      <h2>Услуги</h2>
+      <ul>
+        <li>Разработка сайтов</li>
+        <li>UI/UX-дизайн</li>
+        <li>SEO и оптимизация</li>
+        <li>Поддержка и обновления</li>
+      </ul>
+    </section>
+    <section id="portfolio">
+      <h2>Портфолио</h2>
+      <p>Здесь представлены примеры наших лучших проектов: корпоративные сайты, лендинги и интернет-магазины.</p>
+    </section>
+    <section id="team">
+      <h2>Команда</h2>
+      <p>Наша команда состоит из опытных специалистов: дизайнеров, программистов, копирайтеров и маркетологов.</p>
+    </section>
+    <section id="news">
+      <h2>Новости</h2>
+      <p>Следите за нашими обновлениями — мы делимся свежими проектами, советами и статьями о веб-дизайне.</p>
+    </section>
+    <section id="gallery">
+      <h2>Галерея</h2>
+      <img src="загрузка.webp" alt="Описание фото" width="400" height="auto">
+
+      <p>Фото и визуальные материалы, демонстрирующие процесс и результаты нашей работы.</p>
+    </section>
+    <section id="reviews">
+      <h2>Отзывы</h2>
+      <p>Наши клиенты делятся впечатлениями о сотрудничестве. Мы ценим доверие и всегда стремимся к совершенству.</p>
+    </section>
+    <section id="contacts">
+      <h2>Контакты</h2>
+      <p>Email: asyl@example.com<br>Телефон: +7 (705) 353 58 41 <br>Адрес: Казахстан, г. Павлодар</p>
+    </section>
+    <section id="faq">
+      <h2>FAQ</h2>
+      <p><strong>Вопрос:</strong> Как заказать сайт?<br><strong>Ответ:</strong> Просто свяжитесь с нами по email или телефону — обсудим детали и предложим решение под ваши цели.</p>
+    </section>
+    <section id="blog">
+      <h2>Блог</h2>
+      <p>Полезные статьи о веб-разработке, дизайне и современных технологиях.</p>
+    </section>
+  </main>
+
+ <footer>
+  <div style="text-align: left;">
+    <h3>Контакты</h3>
+    <p>г. Павлодар, ул. Кенесары хан 33а<br>
+    Телефон: <a href="tel:+77053535841" style="color:#9aa4b2;">+7 (705) 353 58 41</a><br>
+    Email: <a href="mailto:info@company.kz" style="color:#9aa4b2;">info@company.kz</a></p>
+  </div>
+
+  <div style="text-align: left; margin-top: 10px;">
+    <h3>Соцсети</h3>
+    <p>
+      <a href="#" style="color:#9aa4b2; text-decoration:none; margin-right:10px;">Instagram</a>
+      <a href="#" style="color:#9aa4b2; text-decoration:none; margin-right:10px;">Facebook</a>
+      <a href="#" style="color:#9aa4b2; text-decoration:none;">Telegram</a>
+    </p>
+  </div>
+
+  <div style="text-align: left; margin-top: 10px;">
+    <h3>О компании</h3>
+    <p>Наша компания занимается веб-разработкой и обучением студентов современным технологиям.</p>
+  </div>
+
+  <p style="margin-top: 20px; color: #666; font-size: 13px;">
+    © 2025 АСЫЛ — Все права защищены.
+  </p>
+</footer>
